@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/RoyalCaterers/static/css/main.51be39c1.css",
-    "main.js": "/RoyalCaterers/static/js/main.0dc83a18.js",
+    "main.js": "/RoyalCaterers/static/js/main.6b06e697.js",
     "static/js/453.2f321c38.chunk.js": "/RoyalCaterers/static/js/453.2f321c38.chunk.js",
     "index.html": "/RoyalCaterers/index.html",
     "main.51be39c1.css.map": "/RoyalCaterers/static/css/main.51be39c1.css.map",
-    "main.0dc83a18.js.map": "/RoyalCaterers/static/js/main.0dc83a18.js.map",
+    "main.6b06e697.js.map": "/RoyalCaterers/static/js/main.6b06e697.js.map",
     "453.2f321c38.chunk.js.map": "/RoyalCaterers/static/js/453.2f321c38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51be39c1.css",
-    "static/js/main.0dc83a18.js"
+    "static/js/main.6b06e697.js"
   ]
 }
