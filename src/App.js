@@ -34,6 +34,16 @@ function App() {
 					>
 						<span className="navbar-toggler-icon"></span>
 					</button>
+
+					{/* Desktop-only nav links (visible on lg and up). Hidden on small screens */}
+					<div className="d-none d-lg-block w-100">
+						<ul className="navbar-nav ms-auto d-flex flex-row gap-3 align-items-center justify-content-end">
+							<li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
+							<li className="nav-item"><a className="nav-link" href="#gallery">Gallery</a></li>
+							<li className="nav-item"><a className="nav-link" href="#testimonials">Testimonials</a></li>
+							<li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+						</ul>
+					</div>
 				</div>
 			</nav>
 
