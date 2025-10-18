@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -12,41 +12,63 @@ function App() {
 		form.reset();
 	};
 
+	// control navbar collapse with React state (fixes hamburger on mobile)
+	const [navOpen, setNavOpen] = useState(false);
+
 	return (
 		<div className="App">
 			{/* Navbar */}
 			<nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
 				<div className="container">
 					<a className="navbar-brand d-flex align-items-center" href="#home">
-						<div className="logo-circle me-2">RC</div>
-						<span className="fw-bold">Royal Caterers</span>
+						<div className="logo-circle me-2">RE</div>
+						<span className="fw-bold">Royal Events</span>
 					</a>
 					<button
-						className="navbar-toggler"
+						className={"navbar-toggler" + (navOpen ? "" : " collapsed")}
 						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navMenu"
+						onClick={() => setNavOpen(!navOpen)}
 						aria-controls="navMenu"
-						aria-expanded="false"
+						aria-expanded={navOpen}
 						aria-label="Toggle navigation"
 					>
 						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div className="collapse navbar-collapse" id="navMenu">
-						<ul className="navbar-nav ms-auto">
-							<li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
-							<li className="nav-item"><a className="nav-link" href="#gallery">Gallery</a></li>
-							<li className="nav-item"><a className="nav-link" href="#testimonials">Testimonials</a></li>
-							<li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
-						</ul>
-					</div>
 				</div>
 			</nav>
+
+			{/* Side menu (off-canvas) */}
+			<div className={`side-menu ${navOpen ? 'open' : ''}`} role="dialog" aria-hidden={!navOpen}>
+				<div className="side-menu-header d-flex justify-content-between align-items-center p-3 border-bottom">
+					<div className="d-flex align-items-center">
+						<div className="logo-circle me-2">RE</div>
+						<span className="fw-bold">Royal Events</span>
+					</div>
+					<button className="btn-close" aria-label="Close" onClick={() => setNavOpen(false)}></button>
+				</div>
+				<div className="p-3">
+					<ul className="nav flex-column">
+						<li className="nav-item"><a className="nav-link" href="#services" onClick={() => setNavOpen(false)}>Services</a></li>
+						<li className="nav-item"><a className="nav-link" href="#gallery" onClick={() => setNavOpen(false)}>Gallery</a></li>
+						<li className="nav-item"><a className="nav-link" href="#testimonials" onClick={() => setNavOpen(false)}>Testimonials</a></li>
+						<li className="nav-item"><a className="nav-link" href="#contact" onClick={() => setNavOpen(false)}>Contact</a></li>
+					</ul>
+
+					{/* optional quick contact block */}
+					<div className="mt-4 small text-muted">
+						<div>Phone: +91 98765 43210</div>
+						<div>Email: contact@royalcaterers.example</div>
+					</div>
+				</div>
+			</div>
+
+			{/* Backdrop */}
+			{navOpen && <div className="backdrop" onClick={() => setNavOpen(false)} aria-hidden="true"></div>}
 
 			{/* Hero */}
 			<header id="home" className="hero d-flex align-items-center">
 				<div className="container text-center text-white">
-					<h1 className="display-5 fw-bold">Royal Caterers</h1>
+					<h1 className="display-5 fw-bold">Royal Events</h1>
 					<p className="lead">End-to-end event management — weddings, corporate events, birthdays and more.</p>
 					<a href="#contact" className="btn btn-primary btn-lg mt-3">Get a Quote</a>
 				</div>

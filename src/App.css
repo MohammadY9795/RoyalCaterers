@@ -98,3 +98,67 @@ body {
 		height: 140px;
 	}
 }
+
+/* Side menu (off-canvas) */
+.side-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 280px;
+	max-width: 80%;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+	transform: translate(110%);
+	transition: transform 0.28s ease;
+	z-index: 1050;
+	overflow-y: auto;
+}
+
+/* when open */
+.side-menu.open {
+	transform: translateX(0);
+}
+
+/* ensure header area is not hidden behind navbar */
+.side-menu .side-menu-header {
+	padding-top: calc(1rem + var(--bs-navbar-height, 0)); /* fallback if navbar height var missing */
+}
+
+/* style links inside side menu */
+.side-menu .nav-link {
+	color: #333;
+	padding: .5rem 0;
+}
+.side-menu .nav-link:hover {
+	color: #0d6efd;
+	text-decoration: none;
+}
+
+/* close button (use bootstrap .btn-close look) */
+.side-menu .btn-close {
+	border: none;
+	background: transparent;
+	font-size: 1.4rem;
+	line-height: 1;
+	color: #333;
+}
+
+/* Backdrop overlay */
+.backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	z-index: 1040;
+}
+
+/* Keep navbar visual unchanged when menu opens on mobile */
+.navbar {
+	z-index: 1060; /* ensure navbar stays above backdrop or adjust as needed */
+}
+
+/* small screen tweaks */
+@media (min-width: 992px) {
+	/* optionally make side-menu narrower on large screens */
+	.side-menu { width: 320px; max-width: 28rem; }
+}
