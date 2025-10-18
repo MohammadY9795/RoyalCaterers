@@ -36,3 +36,65 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Logo circle */
+.logo-circle {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #b388eb, #7b6cff);
+	color: white;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+/* Hero section */
+.hero {
+	min-height: 48vh;
+	background-image: url('https://source.unsplash.com/1600x900/?event,celebration');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+}
+.hero .container { position: relative; z-index: 1; }
+
+/* Gallery */
+.gallery-img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	transition: transform .35s ease;
+}
+.gallery-img:hover {
+	transform: scale(1.05);
+}
+
+/* Cards hover */
+.card:hover {
+	transform: translateY(-6px);
+	transition: transform .2s ease;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+	.hero {
+		min-height: 36vh;
+	}
+	.gallery-img {
+		height: 140px;
+	}
+}
