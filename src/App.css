@@ -72,6 +72,95 @@ body {
 }
 .hero .container { position: relative; z-index: 1; }
 
+/* Hero Slider Styles */
+.hero-fullscreen {
+  position: relative;
+  height: 80vh; /* Adjusted height */
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s;
+  z-index: 10;
+  padding-bottom: 4px; /* Center the arrow visually */
+}
+
+.hero-control:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: white;
+}
+
+.hero-fullscreen:hover .hero-control {
+  opacity: 1;
+}
+
+.hero-control.prev {
+  left: 20px;
+}
+
+.hero-control.next {
+  right: 20px;
+}
+
+.hero-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.page-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.page-dot.active {
+    background: white;
+    transform: scale(1.2);
+}
+
 /* Gallery */
 .gallery-img {
 	width: 100%;
