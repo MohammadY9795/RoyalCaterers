@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/RoyalCaterers/static/css/main.51be39c1.css",
-    "main.js": "/RoyalCaterers/static/js/main.6b06e697.js",
+    "main.css": "/RoyalCaterers/static/css/main.7abf431c.css",
+    "main.js": "/RoyalCaterers/static/js/main.1158e8ec.js",
+    "static/js/295.d35752ce.chunk.js": "/RoyalCaterers/static/js/295.d35752ce.chunk.js",
+    "static/js/813.d7a8f5fd.chunk.js": "/RoyalCaterers/static/js/813.d7a8f5fd.chunk.js",
+    "static/js/57.f38c903c.chunk.js": "/RoyalCaterers/static/js/57.f38c903c.chunk.js",
+    "static/js/834.1da744cf.chunk.js": "/RoyalCaterers/static/js/834.1da744cf.chunk.js",
     "static/js/453.2f321c38.chunk.js": "/RoyalCaterers/static/js/453.2f321c38.chunk.js",
+    "static/media/download.jpeg": "/RoyalCaterers/static/media/download.4d70d8e3d95185e3576b.jpeg",
+    "static/media/Whatsapp.png": "/RoyalCaterers/static/media/Whatsapp.467c887a7d8aa59f0ba8.png",
     "index.html": "/RoyalCaterers/index.html",
-    "main.51be39c1.css.map": "/RoyalCaterers/static/css/main.51be39c1.css.map",
-    "main.6b06e697.js.map": "/RoyalCaterers/static/js/main.6b06e697.js.map",
+    "main.7abf431c.css.map": "/RoyalCaterers/static/css/main.7abf431c.css.map",
+    "main.1158e8ec.js.map": "/RoyalCaterers/static/js/main.1158e8ec.js.map",
+    "295.d35752ce.chunk.js.map": "/RoyalCaterers/static/js/295.d35752ce.chunk.js.map",
+    "813.d7a8f5fd.chunk.js.map": "/RoyalCaterers/static/js/813.d7a8f5fd.chunk.js.map",
+    "57.f38c903c.chunk.js.map": "/RoyalCaterers/static/js/57.f38c903c.chunk.js.map",
+    "834.1da744cf.chunk.js.map": "/RoyalCaterers/static/js/834.1da744cf.chunk.js.map",
     "453.2f321c38.chunk.js.map": "/RoyalCaterers/static/js/453.2f321c38.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51be39c1.css",
-    "static/js/main.6b06e697.js"
+    "static/css/main.7abf431c.css",
+    "static/js/main.1158e8ec.js"
   ]
 }
